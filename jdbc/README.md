@@ -1,9 +1,19 @@
 # YCSB-TS / SQLite
 
 ## Prerequisites 
-#### 1. maven
+#### 1. java
+```bash
+$ sudo apt-get install sodftware-properties-common
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+```
+Check `echo $JAVA_HOME`. 
 
-#### 2. java
+#### 2. maven
+```bash
+$ sudo apt-get install maven3
+```
 
 #### 3. sqlite 
 [Reference](https://github.com/SWE3003-41/SQLite/tree/master/sqlite-source)
