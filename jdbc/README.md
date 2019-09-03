@@ -15,6 +15,10 @@ $ wget https://bitbucket.org/xerial/sqlite-jdbc/downloads/sqlite-jdbc-3.27.2.1.j
 ```
 From now on, we are going to name sqlite-jdbc library path as `[SQLITE-LIB]`.
 
+#### 4. python
+```bash
+$ sudo apt-get install python
+```
 
 
 ## Build
@@ -35,7 +39,7 @@ $ mvn -pl com.yahoo.ycsb:jdbc-binding -am clean package
 
 ### Create Table 
 ```bash
-$ sqlite [DB_PATH] < create.sql
+$ sqlite3 [DB_PATH] < create.sql
 ```
 We are going to see schema in detail next week!
 From now on, we are going to name database path as [DB_PATH]`.
@@ -43,10 +47,11 @@ From now on, we are going to name database path as [DB_PATH]`.
 ### Load and Run
 #### Load
 ```bash
-$ ./bin/ycsb load jdbc -P workloads/workloada -p db.driver=org.sqlite.JDBC -p db.url=jdbc:sqlite://[DB_PATH] -cp [SQLITE-LIB]
+$ ./bin/ycsb load jdbc -P workloads/workloada -p db.driver=org.sqlite.JDBC -p db.url=jdbc:sqlite:[DB_PATH] -cp [SQLITE-LIB]
 ```
+- Enter `DB_PATH` as absolute path (절대경로).
 
 #### Run
 ```bash
-$ ./bin/ycsb run jdbc -P workloads/workloada -p db.driver=org.sqlite.JDBC -p db.url=jdbc:sqlite://[DB_PATH] -cp [SQLITE-LIB]
+$ ./bin/ycsb run jdbc -P workloads/workloada -p db.driver=org.sqlite.JDBC -p db.url=jdbc:sqlite:[DB_PATH] -cp [SQLITE-LIB]
 ```
