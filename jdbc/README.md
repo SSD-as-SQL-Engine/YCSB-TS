@@ -2,13 +2,9 @@
 
 ## Prerequisites 
 #### 1. java
-```bash
-$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:webupd8team/java
-$ sudo apt-get update
-$ sudo apt-get install oracle-java8-installer
-```
+- java 유료화로 일전에 안내한 command 사용 불가. (인터넷 검색하여 수동설치)
 Check `echo $JAVA_HOME`. 
+
 
 #### 2. maven
 ```bash
