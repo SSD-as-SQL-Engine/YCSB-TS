@@ -1,20 +1,15 @@
 # YCSB-TS / SQLite
 
 ## Prerequisites 
-#### 1. java
-- java 유료화로 일전에 안내한 command 사용 불가. (인터넷 검색하여 수동설치)
-Check `echo $JAVA_HOME`. 
-
-
-#### 2. maven
+#### 1. maven
 ```bash
 $ sudo apt-get install maven
 ```
 
-#### 3. sqlite 
+#### 2. sqlite 
 [Reference](https://github.com/SWE3003-41/SQLite/tree/master/sqlite-source)
 
-#### 4. sqlite-jdbc
+#### 3. sqlite-jdbc
 ```bash
 $ wget https://bitbucket.org/xerial/sqlite-jdbc/downloads/sqlite-jdbc-3.27.2.1.jar
 ```
