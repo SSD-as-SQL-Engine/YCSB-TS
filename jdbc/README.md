@@ -72,7 +72,7 @@ Let's check if load is done well
 ```bash
 $ sqlite3 [DB_PATH]
 sqlite> select count(*) from usermetric;
-20000
+100000
 sqlite> .quit
 ```
 Check if `(recordcount parameter of workloada == result of query above)`.
