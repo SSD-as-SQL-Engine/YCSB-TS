@@ -61,15 +61,21 @@ recordcount=1000000 --> 100000
 
 1 record size is 50B, so recordcount 100000 means 5MB.
 
-
-
-
 #### Load
 
 ```bash
 $ ./bin/ycsb load jdbc -P workloads/workloada -p db.driver=org.sqlite.JDBC -p db.url=jdbc:sqlite:[DB_PATH] -cp [SQLITE-LIB]
 ```
 - Enter `DB_PATH` as absolute path (절대경로).
+
+Let's check if load is done well 
+```bash
+$ sqlite3 [DB_PATH]
+sqlite> select count(*) from usermetric;
+20000
+sqlite> .quit
+```
+Check if `(recordcount parameter of workloada == result of query above)`.
 
 #### Run
 ```bash
